@@ -32,6 +32,7 @@
             white-space: nowrap;
             padding-right: 20px;
         }
+        
         .dataTable-sorter{
             width: auto;
         }
@@ -43,6 +44,9 @@
         }
         .dataTable-sorter::after{
             border-top: none;
+        }
+        .table td:nth-child(9),.table td:nth-child(10){
+            white-space: nowrap;
         }
         table tbody td:nth-child(6){
             color:rgb(0, 110, 255);
@@ -57,6 +61,9 @@
         .card-header{
             background-color: #f2f7ff;
         }
+        .scrolltable{
+			overflow-x: auto;
+		}
     </style>
 </head>
 
@@ -773,7 +780,7 @@
                         <div class="card-header">
                             <nav aria-label="breadcrumb" class="breadcrumb-header">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="#">DataTable</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Data</li>
                                 </ol>
@@ -843,9 +850,12 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="dataTable-top">
+                            <!-- <div class="dataTable-top">
                                 <div>Total: 171</div>
-                                <div class="dataTable-dropdown">
+                                <div class="dataTable-dropdown"> -->
+                            <div class="row justify-content-between p-3 pb-0">
+                                <div class="col-lg-1">Total: 171</div>
+                                <div class="col-lg-1 ">
                                     <select class="dataTable-selector form-select" name="" id="">
                                         <option value="5">5</option>
                                         <option value="10">10</option>
@@ -854,86 +864,89 @@
                                     </select>
                                 </div>
                             </div>
-                            <table class="table table-md table-hover" id="">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <input type="checkbox">
-                                        </th>
-                                        <th><span>#</span></th>
-                                        <th><a href="" class="dataTable-sorter">코드그룹 코드</a></th>
-                                        <th><a href="" class="dataTable-sorter">코드그룹 이름</a></th>
-                                        <th><a href="" class="dataTable-sorter">코드</a></th>
-                                        <th class="d-flex flex-wrap"><a href="" class="dataTable-sorter">대체코드</a><a href="" class="dataTable-sorter">코드이름</a><a href="" class="dataTable-sorter">코드이름(영문)</a></th>
-                                        <th><a href="" class="dataTable-sorter">사용</a></th>
-                                        <th><a href="" class="dataTable-sorter">순서</a></th>
-                                        <th><a href="" class="dataTable-sorter">등록일</a></th>
-                                        <th><a href="" class="dataTable-sorter">수정일</a></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>171</td>
-                                        <td>57</td>
-                                        <td>테테테</td>
-                                        <td>278</td>
-                                        <td>ㅁㄴㅇㄹ</td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td>2023-10-12 16:02:31</td>
-                                        <td>2023-10-12 16:02:31</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>170</td>
-                                        <td>33</td>
-                                        <td>로그인,로그인UI</td>
-                                        <td>272</td>
-                                        <td>사용자</td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>169</td>
-                                        <td>33</td>
-                                        <td>로그인,로그인UI</td>
-                                        <td>273</td>
-                                        <td>관리자</td>
-                                        <td>Y</td>
-                                        <td>2</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>168</td>
-                                        <td>32</td>
-                                        <td>qna.타입</td>
-                                        <td>266</td>
-                                        <td>기타</td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>167</td>
-                                        <td>31</td>
-                                        <td>qna.상태</td>
-                                        <td>262</td>
-                                        <td>미확인</td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="scrolltable">
+                                <table class="table table-md table-hover" id="">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox">
+                                            </th>
+                                            <th><span>#</span></th>
+                                            <th><a href="" class="dataTable-sorter">코드그룹 코드</a></th>
+                                            <th><a href="" class="dataTable-sorter">코드그룹 이름</a></th>
+                                            <th><a href="" class="dataTable-sorter">코드</a></th>
+                                            <th class="d-flex flex-nowrap"><a href="" class="dataTable-sorter">대체코드</a><a href="" class="dataTable-sorter">코드이름</a><a href="" class="dataTable-sorter">코드이름(영문)</a></th>
+                                            <th><a href="" class="dataTable-sorter">사용</a></th>
+                                            <th><a href="" class="dataTable-sorter">순서</a></th>
+                                            <th><a href="" class="dataTable-sorter">등록일</a></th>
+                                            <th><a href="" class="dataTable-sorter">수정일</a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>171</td>
+                                            <td>57</td>
+                                            <td>테테테</td>
+                                            <td>278</td>
+                                            <td>ㅁㄴㅇㄹ</td>
+                                            <td>Y</td>
+                                            <td>1</td>
+                                            <td>2023-10-12 16:02:31</td>
+                                            <td>2023-10-12 16:02:31</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>170</td>
+                                            <td>33</td>
+                                            <td>로그인,로그인UI</td>
+                                            <td>272</td>
+                                            <td>사용자</td>
+                                            <td>Y</td>
+                                            <td>1</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>169</td>
+                                            <td>33</td>
+                                            <td>로그인,로그인UI</td>
+                                            <td>273</td>
+                                            <td>관리자</td>
+                                            <td>Y</td>
+                                            <td>2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>168</td>
+                                            <td>32</td>
+                                            <td>qna.타입</td>
+                                            <td>266</td>
+                                            <td>기타</td>
+                                            <td>Y</td>
+                                            <td>1</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>167</td>
+                                            <td>31</td>
+                                            <td>qna.상태</td>
+                                            <td>262</td>
+                                            <td>미확인</td>
+                                            <td>Y</td>
+                                            <td>1</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            
                             <div class="dataTable-bottom">
                                 <nav class="dataTable-pagination" aria-label="dataTable-pagination">
                                     <ul class="dataTable-pagination-list pagination pagination-primary justify-content-center">
