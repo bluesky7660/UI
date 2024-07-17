@@ -48,7 +48,15 @@
             color:rgb(0, 110, 255);
             font-weight: bold;
         }
-        
+        #main{
+            padding:0;
+        }
+        #main footer{
+            padding:2rem;
+        }
+        .card-header{
+            background-color: #f2f7ff;
+        }
     </style>
 </head>
 
@@ -56,7 +64,7 @@
     <script src="assets/static/js/initTheme.js"></script>
     <div id="app">
         <div id="sidebar">
-            <div class="sidebar-wrapper active">
+            <div class="sidebar-wrapper border-end active">
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
@@ -95,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sidebar-menu">
+                <div class="sidebar-menu ">
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
                         
@@ -744,30 +752,37 @@
             </header>
             
             <div class="page-heading">
-                <div class="page-title">
-                    <div class="row">
-                        <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3>DataTable</h3>
-                            <p class="text-subtitle text-muted">A sortable, searchable, paginated table without dependencies thanks to simple-datatables.</p>
-                        </div>
-                        <div class="col-12 col-md-6 order-md-2 order-first">
-                            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                <!-- <div class="page-title">
+                    <div class="p-4 pb-0">
+                        <div class="order-first">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">DataTable</li>
+                                    <li class="breadcrumb-item"><a href="#">DataTable</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
                                 </ol>
                             </nav>
                         </div>
-                    </div>
-                </div>
+                        <div class="col-12 col-md-6 order-md-1 order-last">
+                            <h3>DataTable</h3>
+                            <p class="text-subtitle text-muted">A sortable, searchable, paginated table without dependencies thanks to simple-datatables.</p>
+                        </div> 
+                </div> -->
                 <section class="section">
                     <div class="card">
-                        <div class="card-header bg-light">
+                        <div class="card-header">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="#">DataTable</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
                             <h2 class="card-title">
                                 Code
                             </h2>
                             <div>
-                                <form class="row mt-4 gx-3 align-items-center" action="">
+                                <form class="row gx-3 align-items-center" action="">
                                     <div class="row gy-3">
                                         <div class="col-12 col-md-6 col-lg ">
                                         <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
