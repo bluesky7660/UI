@@ -18,12 +18,37 @@
     <link rel="stylesheet" href="./assets/compiled/css/app.css">
     <link rel="stylesheet" href="./assets/compiled/css/app-dark.css">
     <style>
-        .bi{
-            font-size: 1rem;
+       
+        table{
+            font-size: 0.8rem;
         }
         td{
             text-align: center;
         }
+        th{
+            text-align: center;
+        }
+        th a{
+            white-space: nowrap;
+            padding-right: 20px;
+        }
+        .dataTable-sorter{
+            width: auto;
+        }
+        .bi{
+            font-size: 1rem;
+        }
+        th>a {
+            vertical-align: middle;
+        }
+        .dataTable-sorter::after{
+            border-top: none;
+        }
+        table tbody td:nth-child(6){
+            color:rgb(0, 110, 255);
+            font-weight: bold;
+        }
+        
     </style>
 </head>
 
@@ -797,6 +822,7 @@
                                         <div class="col">      
                                         </div>
                                         <div class="col">
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -813,7 +839,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <table class="table table-lg" id="">
+                            <table class="table table-md table-hover" id="">
                                 <thead>
                                     <tr>
                                         <th>
