@@ -59,8 +59,12 @@
 				text-align: center;
 				padding-left: 20px;
 			}
+			.table tr>*{
+				padding:1rem;
+				vertical-align: middle;
+			}
 			.table th:not(.sorting_asc){
-				padding: 0 .5rem;
+				padding: .5rem;
 				padding-left: 20px;
 			}
 			.table th a{
@@ -72,6 +76,41 @@
 			}
 			.scrolltable{
 				overflow-x: auto;
+			}
+			.page-link{
+				border: 0;
+				padding:.6rem 1rem;
+			}
+			.page-item.disabled .page-link{
+				border: 0;
+				opacity: 0;
+			}
+			.page-item.active .page-link{
+				border: 0;
+			}
+			.btn{
+				width: 40px;
+			}
+			.page-item:not(:first-child,:last-child){
+				margin: 0 5px;
+			}
+			.page-item a{
+				border-radius: 10px;
+				transition: 0.3s ease-in-out;
+				opacity: 1;
+			}
+			.page-item.active a:hover{
+				background-color: #3688fa;
+				opacity: 1;
+				color:#fff;
+			}
+			.page-item.active a{
+				color:#fff;
+			}
+			.page-item:not(.active) a:hover{
+				background-color: #3688fa;
+				opacity: 0.5;
+				color:#fff;
 			}
 		</style>
 	</head>
@@ -497,7 +536,7 @@
 						<div class="row">
 							<div class="col-sm-12 col-12">
 								<!-- Card start -->
-								<div class="card">
+								<div class="card border">
 									<div class="card-header bg-light">
 										<h2 class="card-title">
 											Code
@@ -505,55 +544,55 @@
 										<div>
 											<form class="row gx-3 align-items-center" action="">
 												<div class="row gy-3">
-													<div class="col-12 col-md-6 col-lg ">
-													<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-													<select class="form-select" id="inlineFormSelectPref1">
-														<option value="N" selected>N</option>
-														<option value="Y">Y</option>
-													</select>
+													<div class="col-12 col-md-6 col-lg-4 col-xl ">
+														<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+														<select class="form-select" id="inlineFormSelectPref1">
+															<option value="N" selected>N</option>
+															<option value="Y">Y</option>
+														</select>
 													</div>
-													<div class="col-12 col-md-6 col-lg">
-													<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-													<select class="form-select" id="inlineFormSelectPref2">
-														<option value="Y" selected>Y</option>
-														<option value="N">N</option>
-													</select>
+													<div class="col-12 col-md-6 col-lg-4 col-xl">
+														<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+														<select class="form-select" id="inlineFormSelectPref2">
+															<option value="Y" selected>Y</option>
+															<option value="N">N</option>
+														</select>
 													</div>
-													<div class="col-12 col-md-6 col-lg">
-													<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-													<select class="form-select" id="inlineFormSelectPref3">
-														<option selected>수정일</option>
-														<option value="1">One</option>
-														<option value="2">Two</option>
-														<option value="3">Three</option>
-													</select>
+													<div class="col-12 col-md-6 col-lg-4 col-xl">
+														<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+														<select class="form-select" id="inlineFormSelectPref3">
+															<option selected>수정일</option>
+															<option value="1">One</option>
+															<option value="2">Two</option>
+															<option value="3">Three</option>
+														</select>
 													</div>
-													<div class="col-12 col-md-6 col-lg">
-													<label class="visually-hidden" for="specificSizeInputName1">Preference</label>
-													<input type="text" class="form-control" id="specificSizeInputName1" placeholder="" value="2024-06-05">
+													<div class="col-12 col-md-6 col-lg-4 col-xl">
+														<label class="visually-hidden" for="specificSizeInputName1">Preference</label>
+														<input type="text" class="form-control" id="specificSizeInputName1" placeholder="" value="2024-06-05">
 													</div>
-													<div class="col-12 col-md-6 col-lg">
-													<label class="visually-hidden" for="specificSizeInputName2">Preference</label>
-													<input type="text" class="form-control" id="specificSizeInputName2" placeholder="" value="2024-07-05">
+													<div class="col-12 col-md-6 col-lg-4 col-xl">
+														<label class="visually-hidden" for="specificSizeInputName2">Preference</label>
+														<input type="text" class="form-control" id="specificSizeInputName2" placeholder="" value="2024-07-05">
 													</div>
 												</div>
-												<div class="row gy-3">
-													<div class="col-12 col-md-6 col-lg">
-													<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-													<select class="form-select" id="inlineFormSelectPref4">
-														<option selected>검색구분</option>
-														<option value="1">One</option>
-														<option value="2">Two</option>
-														<option value="3">Three</option>
-													</select>
+												<div class="row gy-3 mt-0">
+													<div class="col-12 col-md-6 col-lg-4 col-xl">
+														<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+														<select class="form-select" id="inlineFormSelectPref4">
+															<option selected>검색구분</option>
+															<option value="1">One</option>
+															<option value="2">Two</option>
+															<option value="3">Three</option>
+														</select>
 													</div>
-													<div class="col-12 col-md-6 col-lg">
+													<div class="col-12 col-md-6 col-lg-4 col-xl">
 														<label class="visually-hidden" for="specificSizeInputName2">Preference</label>
 														<input type="text" class="form-control" id="specificSizeInputName2" placeholder="검색어">
 													</div>
-													<div class="col">
-														<button type="button" class="btn btn-primary "><i class="bi bi-search"></i></button>
-														<button type="button" class="btn btn-primary "><i class="bi bi-arrow-clockwise"></i></button>
+													<div class="col-12 col-lg-4 col-xl ">
+														<button type="button" class="btn btn-info "><i class="bi bi-search"></i></button>
+														<button type="button" class="btn btn-info float-md-none float-end"><i class="bi bi-arrow-clockwise"></i></button>
 													</div>
 													<div class="col">      
 													</div>
@@ -565,8 +604,8 @@
 									</div>
 									<div class="card-body">
 										<div class="row justify-content-between">
-											<div class="col col-1-lg">Total: 171</div>
-											<div class="col col-1-lg dataTable-dropdown">
+											<div class="col-6 col-lg-3">Total: 171</div>
+											<div class="col-4 col-xs-3 col-lg-2 dataTable-dropdown dataTables_length">
 												<select class="dataTable-selector form-select" name="" id="">
 													<option value="5">5</option>
 													<option value="10">10</option>
@@ -576,7 +615,7 @@
 											</div>
 										</div>
 										<div class="scrolltable">
-											<table class="table dataTable table-md table-hover" id="">
+											<table class="table dataTable table-hover" id="">
 												<thead>
 													<tr>
 														<th>
@@ -658,25 +697,85 @@
 														<td></td>
 														<td></td>
 													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>167</td>
+														<td>31</td>
+														<td>qna.상태</td>
+														<td>262</td>
+														<td>미확인</td>
+														<td>Y</td>
+														<td>1</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>167</td>
+														<td>31</td>
+														<td>qna.상태</td>
+														<td>262</td>
+														<td>미확인</td>
+														<td>Y</td>
+														<td>1</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>167</td>
+														<td>31</td>
+														<td>qna.상태</td>
+														<td>262</td>
+														<td>미확인</td>
+														<td>Y</td>
+														<td>1</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>167</td>
+														<td>31</td>
+														<td>qna.상태</td>
+														<td>262</td>
+														<td>미확인</td>
+														<td>Y</td>
+														<td>1</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>167</td>
+														<td>31</td>
+														<td>qna.상태</td>
+														<td>262</td>
+														<td>미확인</td>
+														<td>Y</td>
+														<td>1</td>
+														<td></td>
+														<td></td>
+													</tr>
 												</tbody>
 											</table>	
 										</div>
 										
 										<div class="dataTable-bottom">
-											<nav class="dataTable-pagination" aria-label="dataTable-pagination">
+											<nav class="dataTable-pagination mt-5" aria-label="dataTable-pagination">
 												<ul class="dataTable-pagination-list pagination pagination-primary justify-content-center">
-													<li class="page-item">
+													<li class="paginate_button previous page-item" id="previousPage">
 														<a class="page-link" href="#">
 															<span aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
 														</a>
 													</li>
-													<li class="active page-item"><a href="#" data-page="1" class="page-link">1</a></li>
-													<li class="page-item"><a href="#" data-page="2" class="page-link">2</a></li>
-													<li class="page-item"><a href="#" data-page="3" class="page-link">3</a></li>
-													<li class="page-item"><a href="#" data-page="4" class="page-link">4</a></li>
-													<li class="page-item"><a href="#" data-page="5" class="page-link">5</a></li>
+													<li class="active paginate_button page-item"><a href="#" data-page="1" class="page-link">1</a></li>
+													<li class="paginate_button page-item"><a href="#" data-page="2" class="page-link">2</a></li>
+													<li class="paginate_button page-item"><a href="#" data-page="3" class="page-link">3</a></li>
+													<li class="paginate_button page-item"><a href="#" data-page="4" class="page-link">4</a></li>
+													<li class="paginate_button page-item"><a href="#" data-page="5" class="page-link">5</a></li>
 													<!-- <li class="pager page-item"><a href="#" data-page="2" class="page-link">›</a></li> -->
-													<li class="page-item">
+													<li class="paginate_button next page-item" id="nextPage">
 														<a class="page-link" href="#">
 															<span aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
 														</a>
@@ -696,14 +795,14 @@
 												</ul> -->
 											</nav>
 										</div>
-										<div class="btn-toolbar justify-content-between">
+										<div class="btn-toolbar mt-5 justify-content-between">
 											<div>
 												<a href="javascript:void(0);" class="btn btn-danger"><i class="bi bi-x-lg"></i></a>
 												<a href="javascript:void(0);" class="btn btn-danger"><i class="bi bi-trash"></i></a>
 											</div>
 											<div>
 												<button type="button" class="btn btn-success"><i class="bi bi-file-earmark-excel"></i></button>
-												<a href="javascript:void(0);" class="btn btn-primary"><i class="bi bi-plus-lg"></i></a>
+												<a href="0_form.html" class="btn btn-info"><i class="bi bi-plus-lg"></i></a>
 											</div>
 										</div>
 									</div>
@@ -736,6 +835,65 @@
 		<!-- *************
 			************ Required JavaScript Files *************
 		************* -->
+		<script>
+			var currentPageIndex = 0; // 현재 페이지 번호 인덱스
+			var pageItems = document.querySelectorAll('.page-item:not(#previousPage):not(#nextPage)');
+
+			// 이전 페이지 링크 클릭 이벤트 처리
+			document.getElementById('previousPage').addEventListener('click', function(event) {
+				event.preventDefault(); // 기본 동작(링크 이동) 방지
+				if (currentPageIndex > 0) {
+				pageItems[currentPageIndex].classList.remove('active'); // 현재 활성화된 페이지 비활성화
+				currentPageIndex--; // 이전 페이지 인덱스로 변경
+				pageItems[currentPageIndex].classList.add('active'); // 이전 페이지 활성화
+				}
+				updatePaginationState(); // 페이지네이션 상태 업데이트
+			});
+
+			// 다음 페이지 링크 클릭 이벤트 처리
+			document.getElementById('nextPage').addEventListener('click', function(event) {
+				event.preventDefault(); // 기본 동작(링크 이동) 방지
+				if (currentPageIndex < pageItems.length - 1) { // 마지막 페이지 미포함
+				pageItems[currentPageIndex].classList.remove('active'); // 현재 활성화된 페이지 비활성화
+				currentPageIndex++; // 다음 페이지 인덱스로 변경
+				pageItems[currentPageIndex].classList.add('active'); // 다음 페이지 활성화
+				}
+				updatePaginationState(); // 페이지네이션 상태 업데이트
+			});
+
+			// 페이지 번호 링크 클릭 이벤트 처리
+			pageItems.forEach(function(pageItem, index) {
+				pageItem.addEventListener('click', function(event) {
+				event.preventDefault(); // 기본 동작(링크 이동) 방지
+				if (currentPageIndex !== index) { // 현재 페이지와 클릭한 페이지가 다를 때만 처리
+					pageItems[currentPageIndex].classList.remove('active'); // 현재 활성화된 페이지 비활성화
+					currentPageIndex = index; // 클릭한 페이지 인덱스로 변경
+					pageItems[currentPageIndex].classList.add('active'); // 클릭한 페이지 활성화
+					updatePaginationState(); // 페이지네이션 상태 업데이트
+				}
+				});
+			});
+
+			// 초기 페이지네이션 상태 업데이트
+			updatePaginationState();
+
+			// 페이지네이션 버튼 상태 업데이트 함수
+			function updatePaginationState() {
+				// 이전 버튼 상태 업데이트
+				if (currentPageIndex === 0) {
+				document.getElementById('previousPage').classList.add('disabled'); // 첫 번째 페이지에서는 이전 버튼 비활성화
+				} else {
+				document.getElementById('previousPage').classList.remove('disabled'); // 첫 번째 페이지가 아닌 경우 이전 버튼 활성화
+				}
+
+				// 다음 버튼 상태 업데이트
+				if (currentPageIndex === pageItems.length - 1) {
+				document.getElementById('nextPage').classList.add('disabled'); // 마지막 페이지에서는 다음 버튼 비활성화
+				} else {
+				document.getElementById('nextPage').classList.remove('disabled'); // 마지막 페이지가 아닌 경우 다음 버튼 활성화
+				}
+			}
+		</script>
 		<!-- Required jQuery first, then Bootstrap Bundle JS -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
