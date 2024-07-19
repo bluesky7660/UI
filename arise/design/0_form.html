@@ -505,7 +505,9 @@
 													<div class="mb-3">
 														<label for="inputIndustryType" class="form-label">코드그룹</label>
 														<select class="form-select" id="inputIndustryType">
-															<option value="Select">코드그룹</option>
+															<option value="0">선택하세요</option>
+															<option value="1">1</option>
+															<option value="2">2</option>
 														</select>
 													</div>
 												</div>
@@ -514,33 +516,33 @@
 												<div class="required col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
 														<label for="inputName" class="form-label">코드</label>
-														<input type="text" class="form-control" id="inputName" placeholder="Enter Name">
+														<input type="text" class="form-control" id="inputName" placeholder="자동생성" readonly disabled>
 													</div>
 												</div>
 												<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
 														<label for="inputEmail" class="form-label">코드(ANOTHER)</label>
-														<input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+														<input type="email" class="form-control" id="inputEmail" placeholder="영대소문자, 숫자">
 													</div>
 												</div>
 												<div class="required col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
 														<label for="inputNumber" class="form-label">코드이름</label>
-														<input type="text" class="form-control" id="inputNumber" placeholder="Enter Phone Number">
+														<input type="text" class="form-control" id="inputNumber" placeholder="한글, 영대소문자, 숫자">
 													</div>
 												</div>
 												<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
 														<label for="inputCompanyName" class="form-label">코드이름 (영문)</label>
-														<input type="text" class="form-control" id="inputCompanyName"
-															placeholder="Enter Company Name">
+														<input type="text" class="form-control" id="inputCompanyName" placeholder="영대소문자, 숫자">
 													</div>
 												</div>
 												<div class="required col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
 														<label for="inputIndustryType" class="form-label">사용여부</label>
 														<select class="form-select" id="inputIndustryType">
-															<option value="Select">사용</option>
+															<option value="1">사용</option>
+															<option value="0">사용안함</option>
 														</select>
 													</div>
 												</div>
@@ -548,7 +550,7 @@
 													<div class="mb-3">
 														<label for="inputProvince" class="form-label">순서</label>
 														<input type="text" class="form-control" id="inputProvince"
-															placeholder="Enter Province/Territory">
+															placeholder="">
 													</div>
 												</div>
 											</div>
@@ -556,7 +558,7 @@
 												<div class="col-xl-6 col-md-8 col-12">
 													<div class="mb-3">
 														<label for="inputMessage" class="form-label">설명</label>
-														<textarea class="form-control" id="inputMessage" placeholder="Enter Message"
+														<textarea class="form-control" id="inputMessage" placeholder=""
 															rows="3"></textarea>
 													</div>
 												</div>
