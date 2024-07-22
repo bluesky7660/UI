@@ -498,17 +498,20 @@
 										<div class="card-title">기본정보</div>
 									</div>
 									<div class="card-body">
-										<form action="">
+										<form  class="needs-validation" novalidate>
 											<!-- Row start -->
 											<div class="row">
 												<div class="required col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
-														<label for="inputIndustryType" class="form-label">코드그룹</label>
-														<select class="form-select" id="inputIndustryType">
-															<option value="0">선택하세요</option>
+														<label for="inputIndustryType1" class="form-label">코드그룹</label>
+														<select class="form-select validate-this" id="inputIndustryType1" required>
+															<option value="" selected disabled>선택하세요</option>
 															<option value="1">1</option>
 															<option value="2">2</option>
 														</select>
+														<div class="invalid-feedback">
+															코드그룹을 선택해주세요.
+														</div>
 													</div>
 												</div>
 											</div>
@@ -516,7 +519,7 @@
 												<div class="required col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
 														<label for="inputName" class="form-label">코드</label>
-														<input type="text" class="form-control" id="inputName" placeholder="자동생성" readonly disabled>
+														<input type="text" class="form-control validate-this" id="inputName" placeholder="자동생성" readonly disabled>
 													</div>
 												</div>
 												<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -528,7 +531,10 @@
 												<div class="required col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
 														<label for="inputNumber" class="form-label">코드이름</label>
-														<input type="text" class="form-control" id="inputNumber" placeholder="한글, 영대소문자, 숫자">
+														<input type="text" class="form-control validate-this" id="inputNumber" placeholder="한글, 영대소문자, 숫자" required>
+														<div class="invalid-feedback">
+															코드이름을 적어주세요.
+														</div>
 													</div>
 												</div>
 												<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -538,19 +544,25 @@
 													</div>
 												</div>
 												<div class="required col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-													<div class="mb-3">
-														<label for="inputIndustryType" class="form-label">사용여부</label>
-														<select class="form-select" id="inputIndustryType">
+													<div class="mb-3">	
+														<label for="inputIndustryType2" class="form-label">사용여부</label>
+														<select class="form-select validate-this" id="inputIndustryType2" required>
+															<option value="" selected disabled>선택하세요</option>
 															<option value="1">사용</option>
-															<option value="0">사용안함</option>
+															<option value="2">사용안함</option>
 														</select>
+														<div class="invalid-feedback">
+															사용여부을 선택해주세요.
+														</div>
 													</div>
 												</div>
 												<div class="required col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 													<div class="mb-3">
 														<label for="inputProvince" class="form-label">순서</label>
-														<input type="text" class="form-control" id="inputProvince"
-															placeholder="">
+														<input type="text" class="form-control validate-this" id="inputProvince" placeholder="" required>
+														<div class="invalid-feedback">
+															순서를 적어주세요.
+														</div>
 													</div>
 												</div>
 											</div>
@@ -558,8 +570,7 @@
 												<div class="col-xl-6 col-md-8 col-12">
 													<div class="mb-3">
 														<label for="inputMessage" class="form-label">설명</label>
-														<textarea class="form-control" id="inputMessage" placeholder=""
-															rows="3"></textarea>
+														<textarea class="form-control" id="inputMessage" placeholder="" rows="3"></textarea>
 													</div>
 												</div>
 											</div>
@@ -666,13 +677,17 @@
 												</div>
 											</div>
 											<!-- Row end -->
+											<!-- Form actions footer start -->
+											<div class="col-12">
+												<button class="btn btn-primary" type="submit">Submit form</button>
+											</div>
+											<div class="form-actions-footer justify-content-between bg-white">
+												<a class="btn btn-outline-dark" type="button" href="0_list.html"><i class="bi bi-list-ul"></i></a>
+												<button class="btn btn-info" type="submit"><i class="bi bi-database"></i></button>
+											</div>
+											<!-- Form actions footer end -->
 										</form>
-										<!-- Form actions footer start -->
-										<div class="form-actions-footer justify-content-between bg-white">
-											<a class="btn btn-outline-dark" type="button" href="0_list.html"><i class="bi bi-list-ul"></i></a>
-											<button class="btn btn-info"><i class="bi bi-database"></i></button>
-										</div>
-										<!-- Form actions footer end -->
+										
 
 									</div>
 								</div>
@@ -722,6 +737,7 @@
 
 		<!-- Main Js Required -->
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/validations.js"></script>
 
 	</body>
 
