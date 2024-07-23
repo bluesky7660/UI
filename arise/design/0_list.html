@@ -44,6 +44,8 @@
 		<!-- Data Tables -->
 		<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5.css" />
 		<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5-custom.css" />
+		<!-- Date Range CSS -->
+		<link rel="stylesheet" href="assets/vendor/daterange/daterange.css">
 		<style>
 			.btn .bi{
 				font-size: 1rem;
@@ -569,11 +571,11 @@
 													</div>
 													<div class="col-12 col-md-6 col-lg-4 col-xl">
 														<label class="visually-hidden" for="specificSizeInputName1">Preference</label>
-														<input type="text" class="form-control" id="specificSizeInputName1" placeholder="" value="2024-06-05">
+														<input type="text" class="form-control datepicker" id="specificSizeInputName1" placeholder="" value="2024-06-05">
 													</div>
 													<div class="col-12 col-md-6 col-lg-4 col-xl">
 														<label class="visually-hidden" for="specificSizeInputName2">Preference</label>
-														<input type="text" class="form-control" id="specificSizeInputName2" placeholder="" value="2024-07-05">
+														<input type="text" class="form-control datepicker" id="specificSizeInputName2" placeholder="" value="2024-07-05">
 													</div>
 												</div>
 												<div class="row gy-3 mt-0">
@@ -938,6 +940,10 @@
 
 		<!-- Custom Data tables -->
 		<script src="assets/vendor/datatables/custom/custom-datatables.js"></script>
+
+		<!-- Date Range JS -->
+		<script src="assets/vendor/daterange/daterange.js"></script>
+		<script src="assets/vendor/daterange/custom-daterange.js"></script>
 
 		<!-- Main Js Required -->
 		<script src="assets/js/main.js"></script>
